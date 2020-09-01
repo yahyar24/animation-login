@@ -1,0 +1,202 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: roboto;
+}
+
+html{
+  background: #0acfef;
+}
+body{
+  height: 100vh;
+}
+
+h2{
+  font-size: 18px;
+  /* font-weight: 500; */
+  text-transform: uppercase;
+  display: inline-block;
+  text-align: center;
+  margin: 40px 6px 20px 6px;
+  
+}
+.active{
+  border-bottom: 2px solid #0acfef;
+  color: #313131;
+}
+a{
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #909090;
+  display: inline-block;
+
+}
+.container{
+  width: 100%;
+  min-height: 100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form_container{
+  width: 450px;
+  height: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 0px;
+  text-align: center;
+  box-shadow: 0px 20px 60px #00000045;
+}
+
+.image img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  
+  
+}
+
+input[type=text]{
+  border: none;
+  width: 85%;
+  padding: 15px 32px;
+  font-size: 16px;
+  text-align: center;
+  border: 2px solid #f6f6f6;
+  border-radius: 5px;
+  margin: 8px 0px;
+  background: #f6f6f6;
+  transition: all 0.5s ease-in-out;
+  box-shadow: border-box;
+}
+
+
+
+
+
+
+/* <!-- form input --> */
+
+input[type=text]:focus{
+  background: #fff;
+  border-bottom: 2px solid #0acfef;
+}
+input[type=submit]{
+  padding: 14px 85px;
+  background: #0acfef;
+  box-shadow: 0px 0px 30px #0acfef40;
+  border: none;
+  border-radius: 5px;
+  margin: 8px 0px 40px 0px;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+              
+               
+}
+input[type=submit]:hover{
+  background: #00dbff;
+}
+
+
+
+.footer-cotainer {
+  width: 100%;
+  height: auto;
+  border-radius: 0px 0px 10px 10px;
+  background: #f6f6f6;
+  padding: 30px 0px;
+  border-top: 1px solid #dce8f1;
+}
+
+
+
+
+
+/*-------------------
+ heading css animation
+ -------------------*/
+
+
+.animation-active{
+  color: #909090;
+}
+.animation-active:hover{
+  color: #313131;
+}
+
+.animation-active:after{
+  display: block;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #0acfef;
+  transition: width 0.5s;
+
+}
+.animation-active:hover:after{
+  width: 100%;
+}
+
+
+
+
+
+/*----------------
+ input animation
+ -----------------*/
+
+
+@keyframes fade-in{
+  from{ opacity: 0;}
+  to { opacity: 1;}
+}
+
+.fade-in{
+  opacity:0;
+  animation: fade-in ease-in 1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.fade-in.one{
+  animation-delay: 0.4s;
+}
+.fade-in.two{
+  animation-delay: 0.6s;
+}
+.fade-in.three{
+  animation-delay: 0.8s;
+}
+.fade-in.one-four{
+  animation-delay: 1s;
+}
+
+
+
+
+/*----------------
+ top slide animation 
+ -----------------*/
+
+.form_container{
+  animation-name: fadeout;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeout{
+  from{
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
